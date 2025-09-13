@@ -1,0 +1,359 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden; 
+}
+
+.ana-icerik {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f5f7ff;
+    padding: 0 20px;
+}
+
+.yo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 425px;
+    width: 100%;
+    max-width: 1350px; 
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
+}
+
+.sa {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    line-height: 50px;
+    width: 100%;  
+}
+
+.label1 {
+    margin: 0;
+    padding: 20px; 
+    padding-top: 30px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 44px;
+    font-weight: 800;
+    background-color: transparent;
+    color: #212e45;
+    line-height: 1.1; 
+}
+
+.label2 {
+    margin: 0;
+    padding: 21px;
+    padding-top: 0px; 
+    width: 400px;
+    max-width: 400px; 
+    font-size: 23px;
+    font-weight: 400;
+    background-color: transparent;
+    color: #4c5e7f; 
+    line-height: 1.4; 
+    white-space: nowrap;
+}
+
+.menu2 {
+    display: flex;
+    height: 425px;
+    width: 55%;
+    background-color: transparent;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.yukleme1 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    background-color: #fff;
+    border-radius: 20px;
+    width: 85%;
+    height: 95%;
+    border: 2px dashed rgba(55, 88, 249, 0.4);
+    padding: 20px;
+    text-align: center;
+    box-shadow:rgba(55, 88, 249, 0.12) 5px 11px 26px 0px;
+}
+
+.image1 {
+    margin-bottom: 20px;
+    max-width: 100px;
+    height: auto;
+}
+
+.label3 {
+    color: #4c5e7f;
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.label4 {
+    color: #4c5e7f;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dosya-boyutu {
+    color: rgb(76, 94, 127);
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.yukle-butonu {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(55,88,249);
+    border-radius: 5px;
+    border: 1px solid rgb(55,88,249);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px 120px;
+    cursor: pointer;
+    transition: all 0.1s;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.yukle-butonu:hover {
+    background-color: rgb(36,67,215);
+}
+
+#pdf-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f7ff;
+    width: 100%;
+    min-height: 100vh;
+}
+
+#pdf-viewer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Butonları buna göre konumlandıracağız */
+    margin: 20px 0;
+    width: 100%;
+}
+
+#pdf-canvas {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    background-color: white;
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.geri-butonu, .ileri-butonu {
+    background-color: #3758f9;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    position: absolute; /* Mutlak konumlandırma */
+    top: 50%;
+    transform: translateY(-50%); /* Dikey olarak tam ortalama */
+    z-index: 10;
+}
+
+.geri-butonu {
+    left: 10px; /* Soldan biraz boşluk bırakır */
+}
+
+.ileri-butonu {
+    right: 10px; /* Sağdan biraz boşluk bırakır */
+}
+
+.geri-butonu:hover, .ileri-butonu:hover {
+    background-color: #2940c0;
+}
+
+.geri-butonu:disabled, .ileri-butonu:disabled {
+    background-color: #b0b0b0;
+    cursor: not-allowed;
+    transform: scale(1) translateY(-50%); /* Değişikliği koru */
+    box-shadow: none;
+}
+
+.sayfa-bilgisi-kutu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0;
+    background-color: rgba(255,255,255,0.9);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.sayfa-bilgisi {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(76, 94, 127);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .ana-icerik {
+        min-height: 100vh;
+        padding: 10px;
+    }
+
+    .yo {
+        height: auto;
+        min-height: 270px;
+        width: 100%;
+    }
+
+    .menu2 {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+    }
+
+    .yukleme1 {
+        width: 100%;
+        height: auto;
+        min-height: 280px;
+        padding: 20px 15px;
+        margin: 0;
+    }
+
+    .image1 {
+        width: 60px;
+        margin-bottom: 15px;
+    }
+
+    .label3 {
+        font-size: 16px;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .label4 {
+        font-size: 13px;
+    }
+
+    .yukle-butonu {
+        padding: 15px 30px;
+        font-size: 16px;
+        width: 100%;
+        max-width: 250px;
+        margin: 15px 0;
+    }
+
+    .dosya-boyutu {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+
+    #pdf-container {
+        padding: 10px 5px;
+    }
+
+    #pdf-viewer {
+        margin: 10px 0;
+        width: 100%;
+        justify-content: center; /* Ortalamayı koru */
+    }
+
+    #pdf-canvas {
+        max-width: calc(100vw - 100px); /* Butonlar için boşluk bırakır */
+        max-height: 70vh;
+        margin: 0;
+    }
+
+    .geri-butonu, .ileri-butonu {
+        width: 45px;
+        height: 45px;
+        margin: 0;
+        font-size: 14px;
+    }
+
+    .geri-butonu {
+        left: 5px; /* Mobil için daha dar boşluk */
+    }
+    
+    .ileri-butonu {
+        right: 5px; /* Mobil için daha dar boşluk */
+    }
+
+    .sayfa-bilgisi-kutu {
+        margin: 10px 0;
+        padding: 8px 16px;
+    }
+
+    .sayfa-bilgisi {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ana-icerik {
+        padding: 5px;
+    }
+
+    .yukleme1 {
+        padding: 15px 10px;
+        min-height: 250px;
+    }
+
+    .image1 {
+        width: 50px;
+    }
+
+    .label3 {
+        font-size: 14px;
+    }
+
+    .yukle-butonu {
+        padding: 12px 25px;
+        font-size: 14px;
+        width: 100%;
+        max-width: 180px;
+    }
+
+    #pdf-canvas {
+        max-width: calc(100vw - 90px); /* Daha küçük ekranlar için boşluk */
+        max-height: 65vh;
+    }
+
+    .geri-butonu, .ileri-butonu {
+        width: 40px;
+        height: 40px;
+        font-size: 12px;
+    }
+}
