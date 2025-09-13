@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kacak Kitap Okuma</title>
+    <link rel="stylesheet" href="style.css">     
+</head>
+<body>
+    <div class="ana-icerik">
+        <div class="yo">
+            <div class="menu2">
+                <div class="yukleme1">
+                    <img class="image1" src="https://thebestpdf.com/assets/drag_and_drop-DQ_07ngF.svg" alt="imagee">
+                    <div class="texts">
+                        <p class="label3">Dosyanızı sürükleyip bırakın</p>
+                        <div class="ayirici"></div>
+                        <p class="label4">veya</p>
+                    </div>
+                    <button id="yukle-butonu-js" class="yukle-butonu">Yükle PDF</button>
+                    <input type="file" id="dosya-secici" accept="application/pdf" style="display: none;">
+                    <p class="dosya-boyutu">evren</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div id="pdf-container" style="display: none;">
+    <div id="pdf-viewer">
+        <button id="geributonu" class="geri-butonu">◀</button>
+        <canvas id="pdf-canvas"></canvas>
+        <button id="ileributonu" class="ileri-butonu">▶</button>
+    </div>
+    <div class="sayfa-bilgisi-kutu">
+        <span id="sayfabilgisi" class="sayfa-bilgisi">1/1</span>
+    </div>
+</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
